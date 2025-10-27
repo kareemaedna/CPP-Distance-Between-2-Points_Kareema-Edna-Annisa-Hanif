@@ -3,24 +3,24 @@
 using namespace std;
 
 //formal parameters
-float theDistance(int x1, int y1, int x2, int y2){
+float theDistance(int x1, int y1, int x2, int y2){ //to find the distance
 	return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)); //distance = d^2 = (x2-x1)^2 + (y2-y1)^2
 }
 
-float theRadius(int p1, int cp1, int p2, int cp2){
+float theRadius(int p1, int cp1, int p2, int cp2){ //to find the radius
 	return sqrt(pow(p1 - cp1, 2) + pow(p2 - cp2, 2)); //radius = r^2 = (x-a)^2 + (y-b)^2
 }
 
-float theDiameter(float r){
+float theDiameter(float r){ //to find the diameter
 	return 2 * r;
 }
 
-float theCircum(float r){
+float theCircum(float r){ //to find the circumference
 	const float pi = 3.1416; 
 	return 2 * pi * r; 
 }
 
-float theArea(float r){
+float theArea(float r){ //to find the area
 	const float pi = 3.1416; 
 	return pi * r * r;
 } 
