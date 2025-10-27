@@ -15,9 +15,9 @@ float theDiameter(float r){ //to find the diameter
 	return 2 * r;
 }
 
-float theCircum(float r){ //to find the circumference
+float theCircum(float d){ //to find the circumference
 	const float pi = 3.1416; 
-	return 2 * pi * r; 
+	return pi * d; 
 }
 
 float theArea(float r){ //to find the area
@@ -46,7 +46,7 @@ int main(){
 	float distance = theDistance(x1, y1, x2, y2);
 	float radius = theRadius(p1, cp1, p2, cp2);
 	float diameter = theDiameter(radius);
-	float circumference = theCircum(radius);
+	float circumference = theCircum(diameter);
 	float area = theArea(radius);
 	
 	cout << endl;
