@@ -27,8 +27,8 @@ float theArea(float r){ //to find the area
 
 int main(){
 	int x1, y1, x2, y2;
-	int p1, p2; //as the center (a,b)
-	int cp1, cp2; //as the point of the circle (x,y)
+	int p1, p2; //as the point of the circle (x,y)
+	int cp1, cp2; //as the center (a,b)
 	
 	//point coordinates
 	cout << "Enter a point (x1,y1): ";
