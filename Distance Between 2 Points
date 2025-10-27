@@ -1,0 +1,60 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+//formal parameters
+float theDistance(int x1, int y1, int x2, int y2){
+	return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)); //distance = d^2 = (x2-x1)^2 + (y2-y1)^2
+}
+
+float theRadius(int p1, int cp1, int p2, int cp2){
+	return sqrt(pow(p1 - cp1, 2) + pow(p2 - cp2, 2)); //radius = r^2 = (x-a)^2 + (y-b)^2
+}
+
+float theDiameter(float r){
+	return 2 * r;
+}
+
+float theCircum(float r){
+	const float pi = 3.1416; 
+	return 2 * pi * r; 
+}
+
+float theArea(float r){
+	const float pi = 3.1416; 
+	return pi * r * r;
+} 
+
+int main(){
+	int x1, y1, x2, y2;
+	int p1, p2; //as the center (a,b)
+	int cp1, cp2; //as the point of the circle (x,y)
+	
+	//point coordinates
+	cout << "Enter a point (x1,y1): ";
+	cin >> x1 >> y1;
+	cout << "Enter a point (x2,y2): ";
+	cin >> x2 >> y2;
+	
+	//center and a point of the circle
+	cout << "Enter a point of the circle (x,y): ";
+	cin >> p1 >> p2;
+	cout << "Enter the center of the circle (a,b): ";
+	cin >> cp1 >> cp2;
+	
+	//actual parameters
+	float distance = theDistance(x1, y1, x2, y2);
+	float radius = theRadius(p1, cp1, p2, cp2);
+	float diameter = theDiameter(radius);
+	float circumference = theCircum(radius);
+	float area = theArea(radius);
+	
+	cout << endl;
+	cout << "Distance of the two points: " << distance << endl;
+	cout << "Radius of the circle: " << radius << endl;
+	cout << "Diameter of the circle: " << diameter << endl;
+	cout << "Circumference of the circle: " << circumference << endl;
+	cout << "Area of the circle: " << area;
+	
+	return 0;
+}
