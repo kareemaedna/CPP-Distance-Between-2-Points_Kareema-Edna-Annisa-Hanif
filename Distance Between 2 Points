@@ -2,7 +2,7 @@
 #include <math.h>
 using namespace std;
 
-//formal parameters
+//value-returning function
 float theDistance(int x1, int y1, int x2, int y2){ //to find the distance
 	return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)); //distance = d^2 = (x2-x1)^2 + (y2-y1)^2
 }
